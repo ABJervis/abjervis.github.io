@@ -44,8 +44,11 @@ function displayInfo(){
             
                 //gives image tag src attribute of a property pulled from the result item
             
-                instrumentImage.attr("src", results[i].images.fixed_height.url);
-            
+                instrumentImage.attr('src', results[i].images.fixed_height_still.url)
+                .attr('data-still', results[i].images.fixed_height_still.url)
+                .attr('data-animate', results[i].images.fixed_height.url)
+                .attr('data-state', "still")
+                .addClass("imageGo");
                 //need to append the paragraph, image
             
                 gifDiv.append(p);
@@ -85,10 +88,28 @@ $("#music-add").on("click", function (event){
     console.log(topics)
 
     createButtons();
+    getMoving();
 })
 
 
-$(document).on("click",".instrument-btn", displayInfo);
+//still to animate - need to tie to a click function
+
+$(document).on("click",".instrument-btn", displayInfo); 
+
+function getMoving(){
+    //get or set the value of any attribute on html
+    var state = $(this).attr("data-state");
+    //checks current state of image, still or not, updates its src attribute to what its data-animate value is
+    if (state === "still"){
+        $(this).attr("src",$(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else{
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+
+    }
+    
+}
 
 
 createButtons();

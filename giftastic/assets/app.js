@@ -6,6 +6,7 @@ function displayInfo(){
     var instrument = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + instrument + "&api_key=dc6zaTOxFJmzC&limit=10";
 
+    console.log(queryURL)
 
     $.ajax({
         url: queryURL,
@@ -48,7 +49,7 @@ function displayInfo(){
                 .attr('data-still', results[i].images.fixed_height_still.url)
                 .attr('data-animate', results[i].images.fixed_height.url)
                 .attr('data-state', "still")
-                .addClass("imageGo");
+                .addClass("image-go");
                 //need to append the paragraph, image
             
                 gifDiv.append(p);
@@ -108,7 +109,9 @@ function getMoving(){
         $(this).attr("data-state", "still");
 
     }
-    
+
+    console.log(state)
+
 }
 
 

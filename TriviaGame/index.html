@@ -12,9 +12,9 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8">
+    <div class="container"></div>
+        <div class="jumbotron">
+            <div class="container">
                 <div id=header>
                     <h1>STAR WARS MOVIE QUOTES</h1>
                     <h3>Search Your Feelings, Choose Your Path</h3>
@@ -22,59 +22,31 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div id="countdown"></div>
- 
-   
-     <!--start button-->
-     <div id = "start">
-            <button id="start-button">Start Quiz</button>
-     </div>
-
-    <div class="container" id="quiz-quotes">
-        <p>1.) "You're so right"?<br><br>
-            <input type="radio" name="question" value="incorrect"> Tekka
-            <input type="radio" name="question" value="incorrect">Poe
-            <input type="radio" name="question" value= "correct">Kylo Ren
-        </p>
-        <p>2.) "You must do what you feel is right"?<br><br>
-            <input type="radio" name="question" value="incorrect"> Luke
-            <input type="radio" name="question" value="correct">Obi-Wan
-            <input type="radio" name="question" value="incorrect">Qui-Gon
-        </p>
-        <p>3.) "I find your lack of faith disturbing"?<br><br>
-            <input type="radio" name="question" value="correct"> Darth Vader
-            <input type="radio" name="question" value="incorrect">Darth Maul
-            <input type="radio" name="question" value="incorrect">Yoda
-        </p>
-        <P>4.) "There is a great disturbance in the Force"?<br><br>
-            <input type="radio" name="question" value="incorrect"> Yoda
-            <input type="radio" name="question" value="incorrect">Han Solo
-            <input type="radio" name="question" value="correct">Emperor Palpatine
-        </P>
-        <p>5.) "You cannot escape your destiny. You must face Darth Vader again."<br><br>
-            <input type="radio" name="question" value="incorrect"> Princess Leia
-            <input type="radio" name="question" value="incorrect">Boba Fett
-            <input type="radio" name="question" value="correct">Obi-Wan
-        </p>
-    </div>
-   
-    <!--need a button to submit quiz-->
-    <div id = "finished">
-        <button id="submit">Submit Quiz</button>
-    </div>
-
-    <div class="container" id="results">
-        <div id="correct-answers"></div>
-        <div id="incorrect-answers"></div>
-    </div>
     
+        <div class="card body">
+            <div id=quiz_quotes></div>
+        </div>
+        
+        <div id="countdown"></div>
+        <!--start button-->
+        <div id = "start">
+               <button id="start-button">Start Quiz</button>
+        </div>
+        <!--need a button to submit quiz-->
+       <div id = "finished">
+           <button id="submit">Submit Quiz</button>
+       </div>
+   
+       <div class="container" id="results">
+           <div id="correct-answers"></div>
+           <div id="incorrect-answers"></div>
+       </div>
+    
+    </div>
     
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="assets/javascript/app.js"></script>
-
 
 </body>
 </html>

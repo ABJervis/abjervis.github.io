@@ -1,7 +1,29 @@
-//variables to hold needed information, in this case answer tally
+var card = $("#quiz_quotes");
 
-var correct = 0
-var incorrect = 0
+//questions
+
+var quote = [{
+    quote: "You're so right",
+    answers: ["Tekka", "Poe", "Kylo Ren"],
+    correctAnswer: "Kylo Ren"
+}, {
+    quote = "You must do what you feel is right",
+    answers: ["Luke", "Obi-Wan","Qui-Gon"],
+    correctAnswer: "Obi-Wan"
+
+},{
+    quote: "I find your lack of faith disturbing",
+    answers: ["Darth Vader", "Darth Maul", "Yoda"],
+    correctAnswer: "Darth Vader"
+},{
+    quote: "There is a great disturbance in the Force",
+    answers: ["Yoda", "Han Solo", "Emperor Palpatine"],
+    correctAnswer: "Emperor Palpatine"
+},{
+    quote: "You cannot escape your destiny. You must face Darth Vader again.",
+    answers: ["Princess Leia", "Boba Fett", "Obi-Wan"],
+    correctAnswer: "Obi-Wan"
+}
 
 //need to start the game - click start button starts timer, hides start button and shows questions
 

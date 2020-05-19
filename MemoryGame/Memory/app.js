@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded',() => {
         { 
             name: 'heart',
             img: 'images/heart.jpg'
-        }
+        },
         {
             name: 'flower',
             img: 'images/flower.png'
@@ -59,12 +59,14 @@ document.addEventListener('DOMContentLoaded',() => {
     function createBoard() {
         for (let i = 0; i < cardArray.length; i++){
             var card = document.createElement('img')
-            card.setAttribute('src', 'images/black.jpg')
+            card.setAttribute('src', 'images/back.jpg')
             card.setAttribute('data-id', i)
             //card.addEventListener('click', flipcard)
             grid.appendChild(card) //this puts all cards within the grid 
         }
     }
+
+    createBoard();
 
     //find match
 
